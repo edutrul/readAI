@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery image jigsaw example</title>
+<link rel="stylesheet" href="animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<body class="background-body">
+<script type="text/javascript">
+	new WOW().init();
+</script>
+	<div class="container" style="text-align: center">
+		<h1 class="center_title size_puzzle_title"> ¿Qué tema descubriremos hoy? </h1>
+	</div>
+	<br>
+	<div class="container" style="text-align: center">
+		<div class="panel" style="display: inline-block">
+			<img src="/images/gallo.png">
+		</div>
+	</div>
+
+	<div class="container" style="text-align: center; margin-top: 50px">
+		
+	</div>
+   <form class="center" action="/sample/texto.html">
+     <button class="btn btn-success btn-lg">Sguiente</button>
+   </form>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.image-jigsaw.js"></script>
+<script>
+$(document).ready(function() {
+	$(".panel").jigsaw({freq: 2000, x: 2, y:2, margin: 2, callbacks: [{event: 'mouseover', func: function() {
+		$(this).data('last_bg', $(this).css('background-image'));
+		$(this).css('background-image', 'none');
+	}}, {event: 'mouseout', func: function() {
+		$(this).css('background-image', $(this).data('last_bg'));
+	}}]});	
+});
+</script>
+</head>
+</html>

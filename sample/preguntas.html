@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Comprendeme</title>
+	<link rel="stylesheet" href="animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="background-body">
+<script type="text/javascript">
+	new WOW().init();
+</script>
+<div class="container">
+<script>function dropdown()
+{        document.getElementById("pregunta1").style.display="none";
+		 document.getElementById("pregunta2").style.display="block";
+		 document.getElementById("pregunta3").style.display="none";
+}</script>
+<script>function dropdowntwo()
+{        document.getElementById("pregunta1").style.display="none";
+		 document.getElementById("pregunta2").style.display="none";
+		 document.getElementById("pregunta3").style.display="block";
+}</script>
+	<div class="row">
+		<div id="pregunta1" class="col-md-12 margin_top_pregunta">
+			<h1 class="size_pregunta_title">¿Cúal es el animal que primero se despierta por la mañana en la granja?</h1>
+			<div class="size_pregunta">
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">El gallo Kiko </label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">La vaca Lina</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">El gallo Tomás</label>
+			    </div>
+			</div>
+			    <button onclick="dropdown();" class="btn btn-lg btn-primary">Siguiente</button>
+		</div>
+		<div id="pregunta2" class="col-md-12 margin_top_pregunta" style="display: none;">
+			<h1 class="size_pregunta_title">¿Qué es lo primero que hace el gallo kiko cuando se despierta?</h1>
+			<div class="size_pregunta">
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Saluda al soL</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Abre los ojos</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Sacude sus plumas</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Se baña en un charco</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Bebe agua</label>
+			    </div>
+			</div>
+			    <button onclick="dropdowntwo();" class="btn btn-lg btn-primary">Siguiente</button>
+		</div>
+		<div id="pregunta3" class="col-md-12 margin_top_pregunta" style="display: none;">
+			<h1 class="size_pregunta_title" style="background-image: url('/images/cinta.png');">¿De qué se encarga el gallo kiko por las mañanas?</h1>
+			<div class="size_pregunta">
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Repartir los alimentos</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Barrer el establo</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Despertar a todos los animales de la granja</label>
+			    </div>
+			    <div class="checkbox checkbox-primary">
+			      <label><input type="checkbox" value="">Dar de comer a los pollitos</label>
+			    </div>
+			</div>
+			    <button class="btn btn-lg btn-success">Finalizar</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

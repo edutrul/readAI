@@ -1,0 +1,67 @@
+.center_title {
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+}
+
+body {
+	font-family: 'Indie Flower', cursive;
+}
+
+.size_title {
+	font-size: 120px;
+	color: #6F3BFF;
+	font-weight: bold;
+}
+
+.margin_div_top {
+	margin-top: 50px;
+}
+
+.size_text {
+	font-size: 50px;
+}
+
+.background-body {
+	background-image: url('/images/fondo.jpg');
+}
+
+.form-group, .form-control {
+	border: 1px solid yellow;
+}
+
+.center {
+	text-align: center;
+}
+
+.background-pregunta {
+	background-image: url('/images/cinta.png');
+}
+
+.margin_top_pregunta {
+	margin-top: 60px;
+}
+
+.size_pregunta {
+	font-size: 35px;
+}
+
+.size_pregunta_title {
+	font-size: 60px;
+	color: #F75E4E;
+	margin-bottom: 20px;
+}
+
+input[type=checkbox], input[type=radio] {
+	margin: 10px 0px 0px;
+    height: 20px;
+    width: 20px;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+	margin-left: -40px;
+}
+
+.size_puzzle_title {
+	font-size: 40px;
+	color: #F75E4E;
+}
