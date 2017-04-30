@@ -11,8 +11,11 @@ import en
 from nltk.parse import stanford
 
 # Put where you downloaded the stanford-parser-full...
-os.environ['STANFORD_PARSER'] = '.' #'~/Downloads/stanford-parser-full-2015-04-20/'
-os.environ['STANFORD_MODELS'] = '.' #'~/Downloads/stanford-parser-full-2015-04-20/'
+# os.environ['STANFORD_PARSER'] = '.' #'~/Downloads/stanford-parser-full-2015-04-20/'
+# os.environ['STANFORD_MODELS'] = '.' #'~/Downloads/stanford-parser-full-2015-04-20/'
+
+os.environ['STANFORD_PARSER'] = '/Users/edutrul/Projects/readAI/stanford-parser/'
+os.environ['STANFORD_MODELS'] = '/Users/edutrul/Projects/readAI/stanford-parser/'
 
 smap = {}
 
@@ -72,7 +75,7 @@ class Node(list):
             for k, v in self:
                 if k == token:
                     return v.complete(tokens[1:], qtype)
-            return "Answer unclear"
+            return "Respuesta no clara"
 
     def matches(self, tokens):
         # print tokens
@@ -100,7 +103,7 @@ class Node(list):
 class DummyNode(Node):
 
     def __init__(self):
-        self.label = "Answer unclear"
+        self.label = "Respuesta no clara"
 
     def get(self, key):
         return self
@@ -334,13 +337,13 @@ def describe(tree):
 
         return prop, prop_node
 
-    raise ValueError("ERROR reading " + str(tree))
+    raise ValueError("ERROR leyendo " + str(tree))
 
 
 def answer(tree):
     tree = tree[0]
     if tree.label() != "SBARQ":
-        print "ERROR not a question: " + str(tree)
+        print "ERROR no es una pregunta: " + str(tree)
         return None
 
     # What did Mary / Where did Mary ( ... )
@@ -365,13 +368,13 @@ def answer(tree):
                 objs.append(obj)
 
         if len(objs) == 0:
-            return "Nothing"
+            return "Nada!"
         return ','.join(objs)
 
-    print "ERROR answering"
+    print "ERROR respondiendo"
 
 def usage():
-    print "Usage: " + sys.argv[0] + " [-d]"
+    print "usando: " + sys.argv[0] + " [-d]"
 
 def main(argv):
 
@@ -391,7 +394,7 @@ def main(argv):
 
     parser = stanford.StanfordParser()
 
-    line = raw_input("Enter line: ")
+    line = raw_input("Ingresar linea: ")
 
     while line != 'stop':
         sent = list(parser.raw_parse(line))[0]
@@ -406,7 +409,7 @@ def main(argv):
                 print "Error describing sentence. " + e
             if debug:
                 print smap # print semantic map
-        line = raw_input("Enter line: ")
+        line = raw_input("Ingresa linea: ")
 
 
 if __name__ == "__main__":
